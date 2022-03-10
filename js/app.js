@@ -162,7 +162,7 @@ const displayLikedPosts = () => {
 };
 
 const displayReportedPosts = () => {
-  document.getElementById("reported").innerHTML = "";
+  document.getElementById("reported").innerHTML = ""; // clearing div
   const reportedPosts = getReportedPosts();
   reportedPosts.forEach((post) => {
     const div = createPost(post);
