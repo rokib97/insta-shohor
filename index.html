@@ -93,7 +93,7 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="div">
-              <h2 class="text-start">
+              <h2 class="text-start text-decoration-underline">
                 How does JavaScript and JavaScript engine work in the browser?
               </h2>
               <p>
@@ -115,7 +115,7 @@
                 First is loading or memory creation phase where Js set the
                 memory for variables(values set to undefined which is called
                 hoisting) and functions(reference is created).Second phase is
-                exucution where Js againg start the code from the first line and
+                execution where Js again start the code from the first line and
                 set all the value of varibale which was undefined in the first
                 phase, When there is a function called or invocked in the Global
                 execution a new Function execution context is created just like
@@ -133,6 +133,52 @@
                 the stack. and in the end when there are no function execution
                 ramain the Global also popped out from there and the program
                 ends.
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="mt-5">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="div">
+              <h2 class="text-start text-decoration-underline">
+                What is Event loop in JavaScript?
+              </h2>
+              <p>
+                Inside Browser There is a JavaScript Engine(V8 for chrome) and
+                an environment to run JavaScript properly. This Engine has two
+                parts, Heap And Call Stack. Engine has Some Assistant called Web
+                API's and Callback Queue.
+              </p>
+              <p>
+                JavaScript is single threaded language but it executes
+                asynchronously multiple task with the help of event loop and
+                callback queue.
+              </p>
+              <div
+                class="d-flex justify-content-center align-items-center my-3"
+              >
+                <img
+                  class="img-liquid w-50"
+                  src="./images/event-loop.png"
+                  alt=""
+                />
+              </div>
+              <p>
+                The Event Loop has one simple job — to monitor the Call Stack
+                and the Callback Queue.We know synchronous task executes through
+                the call stack but when a asynchronous task came out call Stack
+                takes that and pass it to the Callback Queue with the help of
+                Web APIs. and executes the rest of the code. When the
+                synchronous task is executed then The Event loop check the queue
+                and call stack if call stack is free and queue has some task it
+                just takes the task in a FIFO way and pass it to the callback.
+                Callback then executes these asynchronous task. If there is any
+                Promise in the code , Event loop takes that promise from
+                Microtask Queue even before callback queue and pass to the call
+                stack. And Thats how Js executes asynchronous code using Evnet
+                Loop.
               </p>
             </div>
           </div>
